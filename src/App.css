@@ -1,7 +1,7 @@
 :root {
-  --blue-deep: #1a1a3a; /* Azul profundo, como el de tu imagen 2 */
+  --blue-deep: #1a1a3a; 
   --blue-darker: #13132e; /* Un poco más oscuro para el fondo general */
-  --blue-light: #2c2c5a; /* Un tono más claro para el contenedor de la app */
+  --blue-light: #2c2c5a; 
   --yellow-bright: #ffd700; /* Amarillo brillante para acentos */
   --yellow-hover: #ffed82; /* Amarillo un poco más claro para hover */
   --text-light: #e0e0e0; /* Texto claro */
@@ -30,14 +30,14 @@ body {
   margin: 40px auto;
   padding: 30px;
   background-color: var(--blue-deep); /* Contenedor azul profundo */
-  border-radius: 15px; /* Bordes más redondeados */
+  border-radius: 15px;
   box-shadow: 0 8px 25px var(--shadow-color); /* Sombra más pronunciada */
   border: 1px solid var(--blue-light); /* Borde sutil */
 }
 
 h1 {
   text-align: center;
-  color: var(--yellow-bright); /* Título amarillo */
+  color: var(--yellow-bright); 
   margin-bottom: 5px;
   font-size: 2.5em;
   text-shadow: 0 0 8px rgba(255, 215, 0, 0.4); /* Efecto de brillo sutil */
@@ -54,7 +54,7 @@ h3 {
 /* --- Formulario (Input + Botón) --- */
 form {
   display: flex;
-  gap: 15px; /* Más espacio entre input y botón */
+  gap: 15px; 
   margin-bottom: 30px;
 }
 
@@ -139,7 +139,6 @@ input[type='checkbox'] {
 .task-item span {
   flex-grow: 1;
   font-size: 1.15em;
-  /* 👇 Añade estas tres líneas nuevas 👇 */
   white-space: nowrap;          /* No permite saltos de línea */
   overflow: hidden;             /* Oculta el texto que se desborda */
   text-overflow: ellipsis;      /* Muestra puntos suspensivos */
@@ -152,17 +151,15 @@ input[type='checkbox'] {
   padding: 8px 15px;
   border: 1px solid transparent;
   min-width: 90px;
-  transition: all 0.2s ease; /* <--- Esta línea es clave para la suavidad */
+  transition: all 0.2s ease; 
 }
 
-/* --- 2. ¡LA REGLA DEL BRILLO! (Esta es la que falta) --- */
 .task-item button:hover {
   background-color: var(--red-error);
   color: var(--text-light);
   box-shadow: 0 0 10px var(--red-error), 0 0 15px var(--red-error); /* <--- El brillo neón */
 }
 
-/* --- 3. La Excepción (para que no brille si ya está completada) --- */
 .task-item.completada button:hover {
   background-color: transparent; /* Se queda transparente */
   color: var(--red-error);      /* Mantiene el color rojo */
@@ -186,3 +183,52 @@ input[type='checkbox'] {
 .task-item.completada button:hover {
   box-shadow: none;
 }
+
+@media (max-width: 600px) {
+  
+  body {
+    padding: 10px; /* Menos espacio en los bordes */
+  }
+
+  .App {
+    margin: 10px auto; /* Menos margen arriba/abajo */
+    padding: 20px;     /* Menos relleno interno */
+  }
+
+  h1 {
+    font-size: 2.0em; /* Título un poco más pequeño */
+  }
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  /* Hacemos que el formulario se ponga en vertical */
+  form {
+    flex-direction: column;
+    gap: 10px; /* Espacio entre el input y el botón */
+  }
+
+  /* Ajustamos tamaños de letra para mejor lectura */
+  input[name='titulo'],
+  button {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  /* Ajustamos el ítem de la tarea */
+  .task-item {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .task-item span {
+    font-size: 1.0em; /* Texto de la tarea un poco más pequeño */
+  }
+  
+  .task-item button {
+    padding: 8px 12px; /* Ajuste del botón eliminar */
+    min-width: 80px;
+  }
+}
+
