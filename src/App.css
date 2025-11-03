@@ -24,17 +24,18 @@ body {
 }
 
 /* --- Contenedor Principal de la App --- */
+/* --- Contenedor Principal de la App --- */
 .App {
   max-width: 600px;
   width: 100%;
   margin: 40px auto;
   padding: 30px;
-  background-color: var(--blue-deep); /* Contenedor azul profundo */
+  background-color: var(--blue-deep);
   border-radius: 15px;
-  box-shadow: 0 8px 25px var(--shadow-color); /* Sombra más pronunciada */
-  border: 1px solid var(--blue-light); /* Borde sutil */
+  box-shadow: 0 8px 25px var(--shadow-color);
+  border: 1px solid var(--blue-light);
+  box-sizing: border-box; /* <--- AÑADE ESTA LÍNEA */
 }
-
 h1 {
   text-align: center;
   color: var(--yellow-bright); 
@@ -202,7 +203,7 @@ input[type='checkbox'] {
   /* 2. Reducimos el padding de la app */
   .App {
     padding: 20px;
-    margin: 15px; /* Menos margen en móvil */
+    margin: 15px auto; /* <--- CAMBIA ESTA LÍNEA */
   }
 
   /* 3. ¡El formulario! Hacemos que el botón se ponga DEBAJO del input */
