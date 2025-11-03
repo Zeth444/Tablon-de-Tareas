@@ -10,7 +10,7 @@ Este proyecto es un **TaskBoard (Tablón de Tareas)** interactivo desarrollado c
 
 ¡Así es como se ve el proyecto! Se diseñó con una paleta de colores personalizada (azul profundo y amarillo brillante) para una interfaz limpia, moderna y con personalidad.
 
-![Vista Previa del TaskBoard]([https://zeth444.github.io/Tablon-de-Tareas/])
+[Vista Previa del TaskBoard] https://zeth444.github.io/Tablon-de-Tareas
 
 ---
 
